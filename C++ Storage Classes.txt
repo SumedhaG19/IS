@@ -1,0 +1,201 @@
+
+// externStorageClass()
+#include <iostream>
+int x;
+void externStorageClass()
+{ 
+    std::cout<<"Demonstrating extern class\n";
+    extern int x;
+    std::cout<<"value of the variable'x'"
+             <<"declared,as extern:"<<x<<"\n";
+             x=2;
+    std::cout
+             <<"Modified value of the variable'x'"
+             <<"declared as extern:\n"
+             <<x;
+}
+int main() 
+{
+   externStorageClass();
+    return 0;
+}
+
+
+  
+
+
+
+
+
+// static Storage Class
+#include <iostream>
+int staticfun()
+{ 
+    std:: cout<<" For static variables:";
+    static int cout=0;
+    cout++;
+    return cout;
+}
+int nonStaticFun()
+{ 
+    std:: cout<<" For Non-Static variables:";
+    int cout=0;
+    cout++;
+    return cout;
+} 
+int main() 
+{
+    std:: cout<< staticfun() <<"\n";
+    std:: cout<< staticfun() <<"\n";
+    ;
+    std:: cout<< nonStaticFun() <<"\n";
+    ;
+    std:: cout<< nonStaticFun() <<"\n";
+    ;
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+// Register Storage Class 
+#include <iostream>
+void registerStorageClass()
+{
+    std:: cout<<"Demonstrating register class\n";
+    register char b='L';
+    std:: cout
+               <<"value of variable'b'"
+               <<"declared as register:"<<b;
+}
+int main()
+{
+    registerStorageClass();
+    return 0;
+}
+
+
+
+
+
+
+                                        // AUTOMATIC EXAMPLE 1 :-
+#include <stdio.h>
+
+int main() 
+{
+    int a;//auto
+    char b;
+    float c;
+    printf("%d%c%f,a,b,c");
+
+    return 0;
+}
+
+
+
+
+                                       // AUTOMATIC EXAMPLE 2 :-
+#include <stdio.h>
+
+int main() 
+{
+    int a=10,i;
+    printf("%d",++a);
+{
+    int a=20;
+    for(i=0;i<3;i++)
+{
+    printf("%d",a);
+}
+}
+}
+
+
+
+
+
+
+
+                                          // STATIC EXAMPLE 1 :-
+#include <stdio.h>
+static char c;
+static int i;
+static float f;
+static char s[100];
+void main()
+{
+    printf("%d %d %f %s",c,i,f);
+}
+
+
+
+
+
+
+
+                                        // STATIC EXAMPLE 2 :-
+#include <stdio.h> 
+void sum()
+{
+    static int a=10;
+    static int b=24;
+    printf("%d %d \n",a,b);
+    a++;
+    b++;
+}
+void main()
+{
+    int i;
+    for(i=0;i<3;i++)
+{
+    sum();
+}
+}
+
+
+
+
+
+
+
+                                         // REGISTER EXAMPLE 1 :-
+#include <stdio.h>
+int main()
+{
+    register int a;
+    printf("%d",a);
+}
+
+
+
+
+
+
+                                        // EXTERNAL EXAMPLE 1 :-
+#include <stdio.h>
+int a;
+int main()
+{
+    extern int a;
+    printf("%d",a);
+}
+
+
+
+
+
+                                       // EXTERNAL EXAMPLE 2 :-
+#include <stdio.h>
+int a;
+int main()
+{
+    extern int a;
+    printf("%d",a);
+}
+int a=20;
